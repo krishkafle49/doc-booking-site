@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Doctors | SajiloCare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+    .doctors {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .doctor-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .doctor-card:hover {
+      transform: scale(1.05);
+    }
+    .doctor-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .doctor-name {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    .specialty {
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Meet Our Doctors</h1>
+    <div class="doctors">
+      <div class="doctor-card">
+        <img src="images/doctor1.jpg" alt="Doctor 1">
+        <div class="doctor-name">Dr. Aayush Sharma</div>
+        <div class="specialty">Cardiologist</div>
+      </div>
+      <div class="doctor-card">
+        <img src="images/doctor2.jpg" alt="Doctor 2">
+        <div class="doctor-name">Dr. Meena Karki</div>
+        <div class="specialty">Dermatologist</div>
+      </div>
+      <div class="doctor-card">
+        <img src="images/doctor3.jpg" alt="Doctor 3">
+        <div class="doctor-name">Dr. Ramesh Thapa</div>
+        <div class="specialty">Pediatrician</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
