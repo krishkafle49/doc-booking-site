@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Appointment | SajiloCare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #2e86de;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1e5fab;
+    }
+    .confirmation {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <select id="doctor" required>
+        <option value="">Select Doctor</option>
+        <option value="Dr. Aayush Sharma">Dr. Aayush Sharma (Cardiologist)</option>
+        <option value="Dr. Meena Karki">Dr. Meena Karki (Dermatologist)</option>
+        <option value="Dr. Ramesh Thapa">Dr. Ramesh Thapa (Pediatrician)</option>
+      </select>
+      <input type="date" id="date" required>
+      <input type="time" id="time" required>
+      <button type="submit">Book Appointment</button>
+    </form>
+    <div class="confirmation" id="confirmationMessage">
+      Appointment booked successfully! ✅
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
 
