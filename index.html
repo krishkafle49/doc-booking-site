@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocBook - Book Your Appointment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DocBook</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Doctors</a>
+      <a href="#">Appointments</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Book Your Doctor Appointment Online</h2>
+      <p>Skip the waiting room. Find your doctor. Book instantly.</p>
+      <button onclick="bookNow()">Book Now</button>
+    </section>
+
+    <section class="form-section">
+      <h3>Appointment Form</h3>
+      <form id="appointmentForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" required>
+          <option value="">--Choose a doctor--</option>
+          <option value="dr-smith">Dr. Smith - Cardiologist</option>
+          <option value="dr-lee">Dr. Lee - Dermatologist</option>
+          <option value="dr-patel">Dr. Patel - General Physician</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+
+        <button type="submit">Confirm Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 DocBook. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
 
