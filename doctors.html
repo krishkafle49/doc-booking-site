@@ -7,15 +7,37 @@
 </head>
 <body>
   <nav>
+    <img src="images/sajilocare logo.png" alt="SajiloCare Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
     <a href="index.html">Home</a>
     <a href="doctors.html">Doctors</a>
     <a href="booking.html">Book Appointment</a>
     <a href="find-doctor.html">Find Doctor</a>
   </nav>
 
+  <!-- Doctor Registration Form -->
+  <section class="section">
+    <h2 class="section-title">Register as a Doctor</h2>
+    <form id="doctorForm" class="doctor-form">
+      <div class="form-group">
+        <label for="docName">Name</label>
+        <input type="text" id="docName" required />
+      </div>
+      <div class="form-group">
+        <label for="docSpecialty">Specialty</label>
+        <input type="text" id="docSpecialty" required />
+      </div>
+      <div class="form-group">
+        <label for="docImage">Upload Image</label>
+        <input type="file" id="docImage" accept="image/*" required />
+      </div>
+      <button type="submit">Register Doctor</button>
+    </form>
+  </section>
+
+  <!-- Doctors List -->
   <section class="section">
     <h2 class="section-title">Meet Our Doctors</h2>
-    <div class="doctor-grid">
+    <div class="doctor-grid" id="doctorList">
       <div class="doctor-card">
         <img src="images/doctor1.jpg" alt="Dr. Aayush Shrestha">
         <h3>Dr. Aayush Shrestha</h3>
@@ -33,5 +55,7 @@
       </div>
     </div>
   </section>
+
+  <script src="app.js"></script>
 </body>
 </html>
