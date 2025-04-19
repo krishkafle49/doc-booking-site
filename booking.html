@@ -2,100 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Book Appointment | SajiloCare</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-    }
-    .container {
-      max-width: 90%;
-      width: 100%;
-      margin: 50px auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    input, select {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    button {
-      width: 100%;
-      padding: 0.9rem;
-      background-color: #2e86de;
-      border: none;
-      color: white;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1e5fab;
-    }
-    .confirmation {
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: bold;
-      color: green;
-      display: none;
-    }
-  </style>
+  <title>Book Appointment - SajiloCare</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav style="background-color: #2e86de; padding: 1rem; text-align: center;">
-  <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Home</a>
-  <a href="doctors.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Doctors</a>
-  <a href="booking.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Book Appointment</a>
-  <a href="find-doctor.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Find Doctor</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="booking.html">Book Appointment</a>
+    <a href="find-doctor.html">Find Doctor</a>
+  </nav>
 
-  <div class="container">
-    <h2>Book an Appointment</h2>
+  <div class="booking-form">
+    <h2>Book Your Appointment</h2>
     <form id="bookingForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-      <select id="doctor" required>
-        <option value="">Select Doctor</option>
-        <option value="Dr. Aayush Sharma">Dr. Aayush Sharma (Cardiologist)</option>
-        <option value="Dr. Meena Karki">Dr. Meena Karki (Dermatologist)</option>
-        <option value="Dr. Ramesh Thapa">Dr. Ramesh Thapa (Pediatrician)</option>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name" />
+
+      <label for="appointmentDate">Appointment Date</label>
+      <input type="date" id="appointmentDate" name="appointmentDate" required />
+
+      <label for="doctor">Select Doctor</label>
+      <select id="doctor" name="doctor">
+        <option value="aayush">Dr. Aayush Shrestha – Cardiologist</option>
+        <option value="nisha">Dr. Nisha Karki – Dermatologist</option>
+        <option value="pramila">Dr. Pramila Thapa – Neurologist</option>
       </select>
-      <input type="date" id="date" required>
-      <input type="time" id="time" required>
-      <button type="submit">Book Appointment</button>
+
+      <button type="submit">Book Now</button>
     </form>
-    <div class="confirmation" id="confirmationMessage">
-      Appointment booked successfully! ✅
-    </div>
   </div>
 
-  <script src="js/script.js"></script>
-
-  /* Booking Form Container */
-.container {
-  max-width: 700px; /* increased from 500px */
-  width: 90%;
-  margin: 50px auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
+  <script src="app.js"></script>
 </body>
 </html>
-
