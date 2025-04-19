@@ -1,22 +1,47 @@
-// app.js
+document.addEventListener('DOMContentLoaded', function () {
+  const doctorForm = document.getElementById('doctorForm');
+  const doctorList = document.getElementById('doctorList');
 
-// Example function to handle form validation for booking appointments
-function validateBookingForm() {
-  const name = document.getElementById("name").value;
-  const date = document.getElementById("appointmentDate").value;
+  if (doctorForm && doctorList) {
+    doctorForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  if (!name || !date) {
-    alert("Please fill in all fields before submitting!");
-    return false;
-  }
-  return true;
-}
+      const nameInput = document.getElementById('docName');
+      const specialtyInput = document.getElementById('docSpecialty');
+      const imageInput = document.getElementById('docImage');
 
-// Example function to handle booking form submission
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  if (validateBookingForm()) {
-    alert("Appointment booked successfully!");
-    // Add more code to handle saving data or displaying confirmation
+      const name = nameInput.value.trim();
+      const specialty = specialtyInput.value.trim();
+      const imageFile = imageInput.files[0];
+
+      if (!name || !specialty || !imageFile) {
+        alert("Please fill in all fields!");
+        return;
+      }
+
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const imageUrl = e.target.result;
+
+        const doctorCard = document.createElement('div');
+        doctorCard.classList.add('doctor-card');
+
+        doctorCard.innerHTML = `
+          <img src="${imageUrl}" alt="${name}">
+          <h3>${name}</h3>
+          <p>${specialty}</p>
+        `;
+
+        doctorList.appendChild(doctorCard);
+
+        // Clear the form
+        nameInput.value = '';
+        specialtyInput.value = '';
+        imageInput.value = '';
+      };
+
+      reader.readAsDataURL(imageFile);
+    });
   }
 });
