@@ -1,208 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to SajiloCare</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap">
-  <style>
-    /* Reset & Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f9ff;
-      color: #333;
-      line-height: 1.7;
-    }
-
-    /* Navbar */
-    nav {
-      background-color: #0077cc;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .logo {
-      height: 40px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 6rem 2rem;
-      text-align: center;
-      background: linear-gradient(135deg, #0077cc, #00aaff);
-      color: white;
-      border-radius: 10px;
-      max-width: 1200px;
-      margin: 2rem auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .cta-button {
-      padding: 1rem 3rem;
-      background-color: #ffd700;
-      color: #0077cc;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s;
-    }
-    .cta-button:hover {
-      background-color: #ffcc00;
-      transform: scale(1.05);
-    }
-
-    /* Section Layout */
-    .section {
-      padding: 3rem 2rem;
-      text-align: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .section-title {
-      font-size: 2rem;
-      color: #0077cc;
-      margin-bottom: 2rem;
-    }
-
-    /* Features */
-    .features {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .feature {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      flex: 1 1 calc(33.333% - 2rem);
-      transition: transform 0.3s ease;
-    }
-    .feature h3 {
-      color: #0077cc;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    .feature p {
-      color: #555;
-      font-size: 1.125rem;
-    }
-    .feature:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Footer */
-    footer {
-      background-color: #0077cc;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        margin-top: 1rem;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
-      .feature {
-        flex: 1 1 100%;
-        margin-bottom: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar with Logo -->
+  <!-- Navigation Bar -->
   <nav>
-   <img src="images/sajilocare logo.png" alt="SajiloCare Logo" class="logo">
+    <a href="index.html" class="logo">SajiloCare</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="doctors.html">Doctors</a>
       <a href="booking.html">Book Appointment</a>
       <a href="find-doctor.html">Find Doctor</a>
+      <a href="login.html">Login</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to SajiloCare</h1>
-    <p>Your trusted platform for quick and easy doctor appointments.</p>
-    <a href="booking.html" class="cta-button">Book Now</a>
-  </section>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to SajiloCare</h1>
+      <p>Your one-stop solution for quick and trusted doctor appointments</p>
+      <a href="booking.html" class="cta-button">Book Now</a>
+    </div>
+  </header>
 
-  <!-- Features Section -->
-  <section class="section">
-    <h2 class="section-title">What We Offer</h2>
+  <!-- What We Offer Section -->
+  <section class="features-section">
+    <h2>What We Offer</h2>
     <div class="features">
-      <div class="feature">
+      <div class="feature-card">
         <h3>Verified Doctors</h3>
-        <p>We only list certified, experienced, and highly rated professionals.</p>
+        <p>Only licensed and experienced professionals on our platform.</p>
       </div>
-      <div class="feature">
+      <div class="feature-card">
         <h3>Instant Booking</h3>
-        <p>Book appointments in just a few clicks. No hassle, no wait.</p>
+        <p>Book appointments with a few clicks. Fast and hassle-free.</p>
       </div>
-      <div class="feature">
+      <div class="feature-card">
         <h3>Smart Matching</h3>
-        <p>Get matched with the perfect doctor based on your symptoms.</p>
+        <p>Not sure who to consult? We match you based on your symptoms.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-card">
+      <p>"SajiloCare made booking a doctor so easy! Highly recommended!"</p>
+      <footer>- Suman S.</footer>
+    </div>
+    <div class="testimonial-card">
+      <p>"The doctors are highly professional, and the booking system is seamless!"</p>
+      <footer>- Nisha R.</footer>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
   <footer>
-    &copy; 2025 SajiloCare. Made with 💙 in Nepal. | <a href="contact.html">Contact Us</a>
+    <div class="footer-content">
+      <p>&copy; 2025 SajiloCare | Made with 💙 in Nepal</p>
+    </div>
   </footer>
 
 </body>
 </html>
-
