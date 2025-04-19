@@ -2,107 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Find Your Doctor | SajiloCare</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      padding: 2rem;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    label {
-      font-weight: bold;
-    }
-    select, button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #2e86de;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1e5fab;
-    }
-    .result {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: #d1f0d1;
-      border: 1px solid #8bc48a;
-      border-radius: 6px;
-      display: none;
-    }
-  </style>
+  <title>Find a Doctor - SajiloCare</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav style="background-color: #2e86de; padding: 1rem; text-align: center;">
-  <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Home</a>
-  <a href="doctors.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Doctors</a>
-  <a href="booking.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Book Appointment</a>
-  <a href="find-doctor.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Find Doctor</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="booking.html">Book Appointment</a>
+    <a href="find-doctor.html">Find Doctor</a>
+  </nav>
 
-  <div class="container">
-    <h2>Find the Right Doctor</h2>
-    <form id="symptomForm">
-      <label for="symptom">What's bothering you?</label>
-      <select id="symptom" required>
-        <option value="">-- Select a symptom --</option>
-        <option value="skin">Skin Rash / Allergy</option>
-        <option value="heart">Chest Pain / Palpitations</option>
-        <option value="child">Child's Health / Fever</option>
-        <option value="general">Fever / Headache / General</option>
-      </select>
-      <button type="submit">Find Doctor</button>
-    </form>
-    <div class="result" id="resultBox"></div>
+  <div class="find-doctor">
+    <h2>Find a Doctor</h2>
+    <label for="specialty">Choose a Specialty</label>
+    <select id="specialty">
+      <option value="cardiology">Cardiology</option>
+      <option value="dermatology">Dermatology</option>
+      <option value="neurology">Neurology</option>
+    </select>
+
+    <label for="doctor-name">Doctor's Name</label>
+    <input type="text" id="doctor-name" placeholder="Enter doctor's name" />
+
+    <button>Search</button>
+
+    <div class="doctor-results">
+      <h3>Available Doctors</h3>
+      <div class="doctor-result">
+        <h4>Dr. Aayush Shrestha</h4>
+        <p>Cardiologist</p>
+      </div>
+      <div class="doctor-result">
+        <h4>Dr. Nisha Karki</h4>
+        <p>Dermatologist</p>
+      </div>
+      <div class="doctor-result">
+        <h4>Dr. Pramila Thapa</h4>
+        <p>Neurologist</p>
+      </div>
+    </div>
   </div>
 
-  <script>
-    document.getElementById("symptomForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const symptom = document.getElementById("symptom").value;
-      const resultBox = document.getElementById("resultBox");
-
-      let recommendation = "";
-
-      switch(symptom) {
-        case "skin":
-          recommendation = "You should see <strong>Dr. Meena Karki</strong> (Dermatologist).";
-          break;
-        case "heart":
-          recommendation = "You should see <strong>Dr. Aayush Sharma</strong> (Cardiologist).";
-          break;
-        case "child":
-          recommendation = "You should see <strong>Dr. Ramesh Thapa</strong> (Pediatrician).";
-          break;
-        case "general":
-          recommendation = "We recommend seeing a <strong>General Physician</strong>. Coming soon!";
-          break;
-        default:
-          recommendation = "Please select a symptom!";
-      }
-
-      resultBox.innerHTML = recommendation;
-      resultBox.style.display = "block";
-    });
-  </script>
 </body>
 </html>
