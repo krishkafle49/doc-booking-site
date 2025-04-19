@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Patient Dashboard - SajiloCare</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9ff;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #2e86de;
+      padding: 2rem;
+      color: white;
+      position: fixed;
+      height: 100%;
+    }
+    .sidebar h2 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 0.8rem 0;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .sidebar a:hover {
+      background-color: #1f5fa5;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #0077cc;
+      margin-bottom: 1.5rem;
+    }
+    .appointment-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .appointment-table th, .appointment-table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+    }
+    .appointment-table th {
+      background-color: #0077cc;
+      color: white;
+    }
+    .appointment-table td button {
+      background-color: #0077cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .appointment-table td button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Patient Dashboard</h2>
+    <a href="#">Book Appointment</a>
+    <a href="#">My Appointments</a>
+    <a href="#">Profile</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="main-content">
+    <h1 class="section-title">My Appointments</h1>
+
+    <table class="appointment-table">
+      <thead>
+        <tr>
+          <th>Doctor Name</th>
+          <th>Appointment Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dr. Aayush Shrestha</td>
+          <td>2025-05-10</td>
+          <td>Confirmed</td>
+        </tr>
+        <tr>
+          <td>Dr. Nisha Karki</td>
+          <td>2025-05-12</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
