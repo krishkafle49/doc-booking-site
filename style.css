@@ -42,12 +42,17 @@ nav {
   flex-wrap: wrap;
 }
 
-.nav-links {
+nav .nav-left {
   display: flex;
-  gap: 1.5em;
+  align-items: center;
 }
 
-/* Fixed Navigation Links */
+nav .nav-right {
+  display: flex;
+  gap: 1.5em; /* Controls the space between the nav links */
+  align-items: center;
+}
+
 .nav-right a {
   color: white;
   text-decoration: none;
@@ -62,7 +67,7 @@ nav {
   color: #ffd700; /* golden hover */
 }
 
-
+/* Logo Styling */
 .logo {
   height: 35px;
   width: auto;
@@ -71,6 +76,14 @@ nav {
   object-fit: contain;
   max-width: 120px;
 }
+
+/* Adjust spacing and alignment of the navigation links */
+.nav-right {
+  display: flex;
+  gap: 2em; /* Can be adjusted to increase/decrease spacing */
+  align-items: center;
+}
+
 
 
 /* Home Page Styles */
