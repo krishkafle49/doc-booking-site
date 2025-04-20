@@ -63,13 +63,15 @@ nav {
 }
 
 
-/* Logo Styling */
-.logo img {
-  height: 50px;
+.logo {
+  height: 35px;
   width: auto;
   vertical-align: middle;
   margin-right: 1rem;
+  object-fit: contain;
+  max-width: 120px;
 }
+
 
 /* Home Page Styles */
 .hero {
