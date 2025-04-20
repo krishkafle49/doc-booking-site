@@ -154,6 +154,30 @@ footer {
   background-color: #0077cc;
   color: white;
 }
+/* Navbar Layout Fix */
+nav {
+  background-color: #0077cc;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .nav-left,
+nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
 
 /* Doctor Recommendation */
 .doctor-results {
