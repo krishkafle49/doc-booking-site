@@ -1,122 +1,60 @@
+<!-- login.html (or add this inside index.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Login - SajiloCare</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
-      padding: 2rem;
-    }
-    .login-container {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .login-tabs {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-    }
-    .login-tabs button {
-      flex: 1;
-      padding: 1rem;
-      border: none;
-      background-color: #e6e6e6;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .login-tabs button.active {
-      background-color: #0077cc;
-      color: white;
-    }
-    .login-form {
-      display: none;
-    }
-    .login-form.active {
-      display: block;
-    }
-    label {
-      display: block;
-      margin: 1rem 0 0.5rem;
-      font-weight: bold;
-    }
-    input {
-      width: 100%;
-      padding: 0.8rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button[type="submit"] {
-      margin-top: 1.5rem;
-      width: 100%;
-      background-color: #0077cc;
-      color: white;
-      padding: 1rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button[type="submit"]:hover {
-      background-color: #005fa3;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="login-container">
-    <div class="login-tabs">
-      <button class="tab-button active" onclick="showForm('admin')">Admin</button>
-      <button class="tab-button" onclick="showForm('doctor')">Doctor</button>
-      <button class="tab-button" onclick="showForm('patient')">Patient</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="booking.html">Book Appointment</a>
+    <a href="find-doctor.html">Find Doctor</a>
+  </nav>
+
+  <section class="login-section">
+    <h2 class="section-title">Login to SajiloCare</h2>
+    <div class="login-form-container">
+      <!-- Admin Login -->
+      <div class="login-option">
+        <h3>Admin Login</h3>
+        <form id="admin-login">
+          <label for="admin-email">Email</label>
+          <input type="email" id="admin-email" name="email" required placeholder="Enter your email">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" name="password" required placeholder="Enter your password">
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Doctor Login -->
+      <div class="login-option">
+        <h3>Doctor Login</h3>
+        <form id="doctor-login">
+          <label for="doctor-email">Email</label>
+          <input type="email" id="doctor-email" name="email" required placeholder="Enter your email">
+          <label for="doctor-password">Password</label>
+          <input type="password" id="doctor-password" name="password" required placeholder="Enter your password">
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Patient Login -->
+      <div class="login-option">
+        <h3>Patient Login</h3>
+        <form id="patient-login">
+          <label for="patient-email">Email</label>
+          <input type="email" id="patient-email" name="email" required placeholder="Enter your email">
+          <label for="patient-password">Password</label>
+          <input type="password" id="patient-password" name="password" required placeholder="Enter your password">
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
-
-    <form id="admin" class="login-form active">
-      <label for="admin-user">Admin Username</label>
-      <input type="text" id="admin-user" required />
-      <label for="admin-pass">Password</label>
-      <input type="password" id="admin-pass" required />
-      <button type="submit">Login as Admin</button>
-    </form>
-
-    <form id="doctor" class="login-form">
-      <label for="doctor-user">Doctor Email</label>
-      <input type="email" id="doctor-user" required />
-      <label for="doctor-pass">Password</label>
-      <input type="password" id="doctor-pass" required />
-      <button type="submit">Login as Doctor</button>
-    </form>
-
-    <form id="patient" class="login-form">
-      <label for="patient-user">Patient Email</label>
-      <input type="email" id="patient-user" required />
-      <label for="patient-pass">Password</label>
-      <input type="password" id="patient-pass" required />
-      <button type="submit">Login as Patient</button>
-    </form>
-  </div>
-
-  <script>
-    function showForm(type) {
-      document.querySelectorAll('.login-form').forEach(form => {
-        form.classList.remove('active');
-      });
-      document.querySelectorAll('.tab-button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.getElementById(type).classList.add('active');
-      event.target.classList.add('active');
-    }
-  </script>
+  </section>
 
 </body>
 </html>
