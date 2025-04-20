@@ -15,22 +15,35 @@ body {
 /* Navigation Bar */
 nav {
   background-color: #0077cc;
-  padding: 1em;
-  text-align: center;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-nav a {
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
   color: white;
   text-decoration: none;
-  margin: 0 1.2em;
   font-weight: bold;
   font-size: 1.1em;
   transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #ffd700;
 }
+
 
 /* Home Page Styles */
 .hero {
