@@ -60,7 +60,7 @@ nav .nav-left .logo {
 /* Right Section (Navigation Links) */
 nav .nav-right {
   display: flex;
-  gap: 1.5em; /* Controls the space between the nav links */
+  gap: 2em; /* Controls the space between the nav links */
   align-items: center;
 }
 
@@ -69,15 +69,21 @@ nav .nav-right {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.8em; /* Maintain your desired font size */
+  font-size: 2em; /* Increased size for better visibility */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 1px;
   transition: color 0.3s ease;
+  text-transform: capitalize; /* Make sure the first letter of each word is capitalized */
 }
 
 /* Hover Effect for Links */
 .nav-right a:hover {
   color: #ffd700; /* golden hover */
+}
+
+/* Specific Style Fix for All Pages */
+body {
+  font-size: 1.6em; /* Ensure body text size is consistently larger */
 }
 
 /* Mobile Responsiveness */
@@ -89,9 +95,10 @@ nav .nav-right {
   }
 
   .nav-right a {
-    font-size: 1.5em; /* Slightly smaller font on smaller screens */
+    font-size: 1.6em; /* Slightly smaller font on smaller screens */
   }
 }
+
 
 /* Logo Styling */
 .logo {
