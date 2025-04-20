@@ -1,31 +1,36 @@
-<!-- login.html (or add this inside index.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login - SajiloCare</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | SajiloCare</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
+    <img src="images/sajilocare logo.png" alt="SajiloCare Logo" class="logo" />
     <a href="index.html">Home</a>
     <a href="doctors.html">Doctors</a>
     <a href="booking.html">Book Appointment</a>
     <a href="find-doctor.html">Find Doctor</a>
+    <a href="login.html">Login</a>
   </nav>
 
+  <!-- Login Section -->
   <section class="login-section">
     <h2 class="section-title">Login to SajiloCare</h2>
     <div class="login-form-container">
+
       <!-- Admin Login -->
       <div class="login-option">
         <h3>Admin Login</h3>
-        <form id="admin-login">
+        <form>
           <label for="admin-email">Email</label>
-          <input type="email" id="admin-email" name="email" required placeholder="Enter your email">
+          <input type="email" id="admin-email" placeholder="admin@example.com" required>
           <label for="admin-password">Password</label>
-          <input type="password" id="admin-password" name="password" required placeholder="Enter your password">
+          <input type="password" id="admin-password" placeholder="Enter password" required>
           <button type="submit">Login</button>
         </form>
       </div>
@@ -33,11 +38,11 @@
       <!-- Doctor Login -->
       <div class="login-option">
         <h3>Doctor Login</h3>
-        <form id="doctor-login">
+        <form>
           <label for="doctor-email">Email</label>
-          <input type="email" id="doctor-email" name="email" required placeholder="Enter your email">
+          <input type="email" id="doctor-email" placeholder="doctor@example.com" required>
           <label for="doctor-password">Password</label>
-          <input type="password" id="doctor-password" name="password" required placeholder="Enter your password">
+          <input type="password" id="doctor-password" placeholder="Enter password" required>
           <button type="submit">Login</button>
         </form>
       </div>
@@ -45,14 +50,15 @@
       <!-- Patient Login -->
       <div class="login-option">
         <h3>Patient Login</h3>
-        <form id="patient-login">
+        <form>
           <label for="patient-email">Email</label>
-          <input type="email" id="patient-email" name="email" required placeholder="Enter your email">
+          <input type="email" id="patient-email" placeholder="patient@example.com" required>
           <label for="patient-password">Password</label>
-          <input type="password" id="patient-password" name="password" required placeholder="Enter your password">
+          <input type="password" id="patient-password" placeholder="Enter password" required>
           <button type="submit">Login</button>
         </form>
       </div>
+
     </div>
   </section>
 
