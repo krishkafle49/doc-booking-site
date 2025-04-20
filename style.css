@@ -305,3 +305,9 @@ nav .nav-right {
 .hidden {
   display: none;
 }
+/* Logo Style */
+.logo {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
