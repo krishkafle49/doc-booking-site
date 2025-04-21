@@ -1,27 +1,27 @@
+// app.js
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const authRoutes = require('./routes/auth'); // Import the authentication routes
 const app = express();
 
 // Middleware
-app.use(express.json());
 app.use(cors());
-
-// MongoDB connection
-mongoose.connect('your-mongo-db-connection-string');
-
-.then(() => console.log('✅ MongoDB connected'))
-.catch((err) => console.error('❌ MongoDB connection error:', err));
+app.use(express.json());
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Hello from SajiloCare backend!');
-});
+app.use('/api/auth', authRoutes); // Use the auth routes under '/api/auth'
 
-// Server
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+// MongoDB Connection
+mongoose.connect('mongodb://localhost:27017/sajilocare', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch((err) => console.log(err));
 
+// Start server
+app.listen(5000, () => {
+    console.log('🚀 Server running on http://localhost:5000');
+});
