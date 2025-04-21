@@ -1,29 +1,24 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const authRoutes = require('./routes/auth');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-const MONGO_URI = 'mongodb://127.0.0.1:27017/sajilocare'; // You can name the DB anything you like
-
-// Middleware
 app.use(cors());
-app.use(express.json()); // Parses incoming JSON requests
+app.use(express.json());
 
-// Routes
-app.use('/api/auth', authRoutes);
+// Replace with your actual MongoDB URI
+const mongoURI = "mongodb://127.0.0.1:27017/sajilocare";
 
-// Connect to MongoDB
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('✅ MongoDB connected');
-  app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
-})
-.catch((err) => {
-  console.error('❌ MongoDB connection error:', err);
+mongoose
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+app.get("/", (req, res) => {
+  res.send("👋 Hello from the SajiloCare backend!");
 });
 
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
